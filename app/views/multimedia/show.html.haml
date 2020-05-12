@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @multimedium.name
+%p
+  %b About:
+  = @multimedium.about
+%p
+  %b Uri path:
+  = @multimedium.uri_path
+%p
+  %b Capture date:
+  = @multimedium.capture_date
+
+= link_to 'Edit', edit_multimedium_path(@multimedium)
+\|
+= link_to 'Back', multimedia_path

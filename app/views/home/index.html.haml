@@ -1,0 +1,19 @@
+.main-content
+  %h1.title Mujer Valiente
+  .window
+    #iam.cat
+      = show_svg "_cat.html"
+    .illustration
+      = image_tag ('photos/main/zs-18.jpg')
+  .scrollmenu
+    .option-wrapper
+      - Multimedium.all.each do |m|
+        - if m.name == 'mujer valiente'
+          .option.active= m.name_abstract
+        - else
+          .option= link_to m.name_abstract, "/media/#{m.id}", remote: true
+      -# .option.active{"data-option" => "dusk"} Valiente
+
+  -# .illustration-about
+    .multimedia--about
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

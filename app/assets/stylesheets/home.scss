@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+body {
+  background: radial-gradient(#684c01, #df2140, #000000);
+
+  font-family: "Comfortaa", sans-serif;
+}
+
+
+.main-content {
+  max-width: calc(100%);
+  margin: 4em auto 0;
+  // align-self: center;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 4em;
+  margin: 0.5em 0 !important;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #b7af17ed;
+}
+
+svg {
+  display: inline-block;
+}
+
+path, polygon, circle, rect {
+  transition: fill 1s ease;
+}
+
+.window {
+  position: relative;
+  background: rgba(41, 2, 2, 0.34);
+  align-items: center;
+  display: inline-block;
+  padding: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 18px;
+    top: 100%;
+    width: 112%;
+    margin-left: -6%;
+    background: #e4ca7e99;
+  }
+}
+
+.cat {
+  position: absolute;
+  z-index: 10;
+  bottom: -5px;
+  right: -35px;
+}
+
+.illustration {
+  position: relative;
+  align-self: center;
+  margin: auto;
+  overflow: hidden;
+  width: calc(70vw);
+  height: calc(40vh);
+
+  img {
+    height: calc(100%);
+    width: auto;
+  }
+}
+
+.option-wrapper {
+  display: flex;
+  // margin: 3em auto;
+  // background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 300px;
+  font-size: 12px;
+  line-height: 1.2;
+  .option {
+    transition: all 200ms ease;
+    padding: 10px 10px 8px;
+    width: 50%;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    &.active {
+      background: #fff;
+      color: #333;
+      pointer-events: none;
+    }
+  }
+}
+
+.illustration-about {
+  position: relative;
+  align-self: center;
+  margin: auto;
+  overflow: hidden;
+  width: calc(70vw);
+  min-height: calc(10vh);
+  height: auto;
+  top: -14px;
+  background: radial-gradient(#cca9a9, #fefefe);
+
+  .multimedia--about {
+    margin: 15px 5px;
+    color: black;
+  }
+}
+
+.scrollmenu {
+  margin: auto;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  max-width: 300px;
+	overflow: auto;
+	white-space: nowrap;
+  margin-top: 2em;
+}
+
+.scrollmenu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	// padding: 14px;
+	text-decoration: none;
+}
+
+.scrollmenu a:hover {
+	background-color: #777;
+}
+
+aside.context {
+  text-align: center;
+  color: #fff;
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding: 3px 0;
+    border-bottom: 1px dashed;
+  }
+  .explanation {
+    max-width: 700px;
+    margin: 4em auto;
+  }
+}
+
+footer {
+  text-align: center;
+  margin: 8em auto;
+  width: 100%;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+		border: 1px dashed #fff;
+    color: #fff;
+    margin: 5px;
+    &:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    .icons {
+      margin-top: 12px;
+      display: inline-block;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+%h1 Listing multimedia
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th About
+      %th Uri path
+      %th Capture date
+      %th
+      %th
+      %th
+
+  %tbody
+    - @multimedia.each do |multimedium|
+      %tr
+        %td= multimedium.name
+        %td= multimedium.about
+        %td= multimedium.uri_path
+        %td= multimedium.capture_date
+        %td= link_to 'Show', multimedium
+        %td= link_to 'Edit', edit_multimedium_path(multimedium)
+        %td= link_to 'Destroy', multimedium, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Multimedium', new_multimedium_path
