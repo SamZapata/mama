@@ -1,3 +1,3 @@
 $('.main-content h1.title').html("<%= @media.name.titleize %>");
 $('.main-content .window .illustration').html('<%= image_tag ("photos/main/#{@media.uri_path}") %>');
-// $('.option-wrapper .option.active').text('<%= @media.name_abstract %>')
+$('.scrollmenu .option-wrapper').html('<%= comp_show_attribrutes("Mujer Valiente".titleize, @media.id) %>')

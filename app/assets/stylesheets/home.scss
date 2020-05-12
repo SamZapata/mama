@@ -129,6 +129,9 @@ path, polygon, circle, rect {
 	text-align: center;
 	// padding: 14px;
 	text-decoration: none;
+  &.active {
+    color: #333;
+  }
 }
 
 .scrollmenu a:hover {

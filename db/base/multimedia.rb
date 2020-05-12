@@ -14,7 +14,8 @@ CSV.foreach(Rails.root.join('seed_information/multimedia_f1.csv'), headers: true
   album = Album.find_by(name: 'Mujer Valiente')
   AlbumMediaJoin.create(
     album_id: album.id,
-    multimedium_id: m.id
+    multimedium_id: m.id,
+    adjective: m.name_abstract
   )
 
   puts "======= added to #{album.name} album ======"

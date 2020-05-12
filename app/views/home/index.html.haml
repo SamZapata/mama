@@ -5,14 +5,11 @@
       = show_svg "_cat.html"
     .illustration
       = image_tag ('photos/main/zs-18.jpg')
+
+  -# component scrollmenu with option-wrapper to show attributes
   .scrollmenu
     .option-wrapper
-      - Multimedium.all.each do |m|
-        - if m.name == 'mujer valiente'
-          .option.active= m.name_abstract
-        - else
-          .option= link_to m.name_abstract, "/media/#{m.id}", remote: true
-      -# .option.active{"data-option" => "dusk"} Valiente
+      = comp_show_attribrutes 'Mujer Valiente'.titleize
 
   -# .illustration-about
     .multimedia--about
