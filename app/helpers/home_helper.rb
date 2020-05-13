@@ -13,9 +13,9 @@ module HomeHelper
     adjectives = []
     album_media.all.each do |m|
       if medium.id == m.multimedium_id
-        adjectives << content_tag(:div, link_to(m.adjective, "/media/#{m.id}", remote: true, class: 'active'), class: 'option active')
+        adjectives << content_tag(:div, link_to(m.adjective, "/media/#{m.id}", remote: true, class: 'active', "data-target" => "#exampleModal", "data-toggle" => "modal"), class: 'option active')
       else
-        adjectives << content_tag(:div, link_to(m.adjective, "/media/#{m.id}", remote: true), class: 'option')
+        adjectives << content_tag(:div, link_to(m.adjective, "/media/#{m.id}", remote: true, "data-target" => "#exampleModal", "data-toggle" => "modal"), class: 'option')
       end
     end
     adjectives.join.html_safe
